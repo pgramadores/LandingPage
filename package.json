@@ -1,0 +1,28 @@
+{
+  "name": "pgramadores-landingpage",
+  "version": "0.0.1",
+  "description": "Landing page para el sitio web de la comunidad Pro-Gramadores",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pgramadores/LandingPage.git"
+  },
+  "keywords": [
+    "pgramadores",
+    "landing",
+    "page"
+  ],
+  "author": "Equipo de Pro-Gramadores",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pgramadores/LandingPage/issues"
+  },
+  "homepage": "https://github.com/pgramadores/LandingPage#readme",
+  "dependencies": {
+    "angular": "^1.6.2",
+    "css-background-video": "^0.3.0"
+  }
+}
