@@ -10,6 +10,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
+
 .container:after {
   clear: both;
   content: ".";
@@ -87,7 +88,7 @@ div {
   margin: 0 auto; }
 
 a {
-  color: #271c3e;
+  color: #191919;
   text-decoration: none;
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
@@ -95,7 +96,7 @@ a {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   a:hover {
-    color: #c1d074; }
+    color: #848484; }
 
 p {
   margin: 0 0 1em;
@@ -120,7 +121,7 @@ p {
   color: white;
   display: inline-block;
   text-align: center;
-  background: #271c3e;
+  background: #191919;
   -webkit-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
@@ -150,7 +151,7 @@ p {
     left: -30%;
     width: 80%;
     height: 240%;
-    background: #c1d074;
+    background: #848484;
     -webkit-transform: rotate(-40deg);
     -moz-transform: rotate(-40deg);
     -o-transform: rotate(-40deg);
@@ -181,13 +182,13 @@ p {
   text-align: left;
   position: relative;
   z-index: 2;
-  color: #271c3e;
+  color: #191919;
   width: 50%; }
   .cta h4 {
     color: white; }
   .cta p {
     font-size: 16px;
-    color: #271c3e;
+    color: #191919;
     margin-bottom: 1.5em; }
   @media all and (max-width: 980px) {
     .cta {
@@ -208,7 +209,7 @@ p {
     margin: 1.5em 0 0;
     font-size: 11px; }
     .reg-form p a {
-      color: #c1d074;
+      color: #848484;
       text-decoration: underline; }
       .reg-form p a:hover {
         color: white; }
@@ -224,7 +225,7 @@ p {
   margin: 0 1% 25px;
   position: relative; }
   .block i {
-    color: #c1d074;
+    color: #848484;
     font-size: 5em;
     margin-bottom: 20px; }
   @media all and (max-width: 980px) {
@@ -333,7 +334,7 @@ html[xmlns] .slides {
       width: 40px;
       height: 40px;
       line-height: 40px;
-      background: #c1d074;
+      background: #848484;
       overflow: hidden;
       color: #fff; }
       .flex-direction-nav li a:before {
@@ -345,7 +346,7 @@ html[xmlns] .slides {
         text-align: center;
         margin: 0 10px 0 0; }
       .flex-direction-nav li a:hover {
-        background: #271c3e; }
+        background: #191919; }
     .flex-direction-nav li .flex-prev {
       float: left; }
       .flex-direction-nav li .flex-prev:before {
@@ -358,7 +359,7 @@ html[xmlns] .slides {
 .features {
   width: 100%;
   display: inline-block;
-  border-bottom: 10px solid #c1d074;
+  border-bottom: 10px solid #848484;
   position: relative;
   padding: 80px 0;
   background: url("images/pattern.jpg") repeat 0 top fixed; }
@@ -370,7 +371,7 @@ html[xmlns] .slides {
     margin: 0 auto 2.5em;
     line-height: 1.4em; }
     .features h2 a {
-      color: #c1d074; }
+      color: #848484; }
       .features h2 a:hover {
         color: white; }
   .features .container {
@@ -397,9 +398,9 @@ html[xmlns] .slides {
   padding: 70px 0 100px; }
   .testimonials h2 {
     font-weight: 100;
-    color: #271c3e; }
+    color: #191919; }
   .testimonials h4 {
-    color: #c1d074;
+    color: #848484;
     margin-bottom: 5em; }
   .testimonials .block {
     width: 47.00855%;
@@ -425,7 +426,7 @@ html[xmlns] .slides {
       border-color: transparent;
       border-top-color: #e5e5e5; }
     .testimonials .block p:last-of-type {
-      color: #271c3e;
+      color: #191919;
       font-size: 24px;
       font-weight: 300;
       line-height: 1em; }
@@ -433,14 +434,14 @@ html[xmlns] .slides {
       text-transform: none;
       font-weight: 300;
       font-family: "Roboto", sans-serif;
-      color: #271c3e;
+      color: #191919;
       padding: 60px 0 0;
       position: relative;
       margin-bottom: 0.5em; }
       .testimonials .block h4:before {
         display: block;
         content: "\201C";
-        color: #c1d074;
+        color: #848484;
         font-size: 5.5em;
         height: 0;
         font-family: "Montserrat", sans-serif;
@@ -503,7 +504,7 @@ html[xmlns] .slides {
 .footer {
   padding: 60px 0 0;
   color: white;
-  background: #c1d074;
+  background: #848484;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(193, 208, 116, 0.8)), to(rgba(193, 208, 116, 0.8))), url("images/bg-footer.jpg") no-repeat 50% 0 fixed;
   /* Saf4+, Chrome */
   background: -webkit-linear-gradient(top, rgba(193, 208, 116, 0.8), rgba(193, 208, 116, 0.8)), url("images/bg-footer.jpg") no-repeat 50% 0 fixed;
@@ -527,7 +528,7 @@ html[xmlns] .slides {
     color: white; }
     .footer .container p span {
       display: block;
-      color: #271c3e;
+      color: #191919;
       line-height: 1.5em; }
   .footer .btn {
     margin: 40px 0 50px;
@@ -537,7 +538,7 @@ html[xmlns] .slides {
         min-width: 300px; } }
 
 .copyright {
-  border-top: 1px solid #c1d074;
+  border-top: 1px solid #848484;
   padding: 35px 0; }
   .copyright p {
     color: white;
@@ -553,7 +554,7 @@ html[xmlns] .slides {
       color: white;
       padding: 0 5px; }
       .copyright p .social-n:hover {
-        color: #271c3e; }
+        color: #191919; }
 
 .overlay {
   position: absolute;
@@ -574,7 +575,7 @@ html[xmlns] .slides {
   width: 500px;
   left: 50%;
   margin-left: -250px;
-  background: #271c3e;
+  background: #191919;
   text-align: left;
   padding: 40px 30px;
   color: white; }
@@ -585,7 +586,7 @@ html[xmlns] .slides {
     top: 10px;
     right: 10px; }
     .popup i:hover {
-      color: #c1d074; }
+      color: #848484; }
   .popup h3 {
     margin-bottom: 1em; }
   .popup p {
@@ -594,7 +595,7 @@ html[xmlns] .slides {
     margin: 1.5em 0 0;
     font-size: 11px; }
     .popup p a {
-      color: #c1d074;
+      color: #848484;
       text-decoration: underline; }
       .popup p a:hover {
         color: white; }
@@ -629,8 +630,8 @@ form option {
 form button.btn {
   width: 100%;
   border: none;
-  background: #c1d074;
-  border-top: 1px solid #e3eac0;
+  background: #848484;
+  border-top: 1px solid #b6b7ba;
   cursor: pointer;
   -webkit-border-radius: 0;
   border-radius: 0;
@@ -640,7 +641,7 @@ form button.btn {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   form button.btn:hover {
-    background: #cfda92; }
+    background: #cecece; }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   form input, form select {
     line-height: 1; } }
@@ -679,17 +680,17 @@ form :-ms-input-placeholder {
     float: none;
     display: inline-block; }
     .header2 .cta h1 {
-      color: #c1d074; }
+      color: #848484; }
     .header2 .cta p {
       color: white; }
   .header2 .btn {
-    background: #c1d074;
-    border-top: 1px solid #e3eac0; }
+    background: #848484;
+    border-top: 1px solid #b6b7ba; }
     .header2 .btn:hover {
-      background: #cfda92;
+      background: #cecece;
       color: white; }
   .header2:after {
-    background: #271c3e;
+    background: #191919;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -703,7 +704,7 @@ form :-ms-input-placeholder {
     filter: alpha(opacity=70); }
 
 .footer2 {
-  background: #271c3e;
+  background: #191919;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(39, 28, 62, 0.8)), to(rgba(39, 28, 62, 0.8))), url("images/bg-footer.jpg") no-repeat 50% 0 fixed;
   /* Saf4+, Chrome */
   background: -webkit-linear-gradient(top, rgba(39, 28, 62, 0.8), rgba(39, 28, 62, 0.8)), url("images/bg-footer.jpg") no-repeat 50% 0 fixed;
@@ -721,25 +722,25 @@ form :-ms-input-placeholder {
   -o-background-size: cover;
   background-size: cover; }
   .footer2 .container p span {
-    color: #c1d074; }
+    color: #848484; }
   .footer2 .btn {
-    background: #c1d074;
-    border-top: 1px solid #e3eac0; }
+    background: #848484;
+    border-top: 1px solid #b6b7ba; }
     .footer2 .btn:hover {
-      background: #cfda92;
+      background: #cecece;
       color: white; }
   .footer2 .copyright {
     border-top: 1px solid #150f22; }
     .footer2 .copyright p {
       color: white; }
       .footer2 .copyright p a {
-        color: #c1d074; }
+        color: #848484; }
         .footer2 .copyright p a:hover {
           color: white; }
     .footer2 .copyright ul li a {
       color: white; }
       .footer2 .copyright ul li a:hover {
-        color: #c1d074; }
+        color: #848484; }
 
 /* Fix for header3 and footer3 style */
 .header3 {
@@ -747,20 +748,20 @@ form :-ms-input-placeholder {
   .header3 .cta {
     padding-top: 40px; }
     .header3 .cta h1 {
-      color: #c1d074; }
+      color: #848484; }
     .header3 .cta p {
       color: white; }
     @media all and (max-width: 980px) {
       .header3 .cta {
         padding-top: 20px; } }
   .header3 .btn {
-    background: #c1d074;
-    border-top: 1px solid #e3eac0; }
+    background: #000000;
+    border-top: 1px solid #b6b7ba; }
     .header3 .btn:hover {
-      background: #cfda92;
+      background: #6b6b6b;
       color: white; }
   .header3:after {
-    background: #271c3e;
+    /*background: #191919; */
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -774,24 +775,24 @@ form :-ms-input-placeholder {
     filter: alpha(opacity=70); }
 
 .footer3 {
-  background: #271c3e; }
+  background: #191919; }
   .footer3 .container p span {
-    color: #c1d074; }
+    color: #848484; }
   .footer3 .btn {
-    background: #c1d074;
-    border-top: 1px solid #e3eac0; }
+    background: #848484;
+    border-top: 1px solid #b6b7ba; }
     .footer3 .btn:hover {
-      background: #cfda92;
+      background: #cecece;
       color: white; }
   .footer3 .copyright {
     border-top: 1px solid #150f22; }
     .footer3 .copyright p {
       color: white; }
       .footer3 .copyright p a {
-        color: #c1d074; }
+        color: #848484; }
         .footer3 .copyright p a:hover {
           color: white; }
     .footer3 .copyright ul li a {
       color: white; }
       .footer3 .copyright ul li a:hover {
-        color: #c1d074; }
+        color: #848484; }
