@@ -9,6 +9,19 @@ jQuery(document).ready(function($) {
   $('.features').parallax("50%", 0.3);
   $('.footer').parallax("50%", 0.1);
 
+  // FlexSlider Testimonials
+  //  $('.flexslider').flexslider({
+  //    animation: "slide",
+  //    controlNav: false,
+  //    directionNav: true,
+  //    animationLoop: false,
+  //    itemWidth: 210,
+  //    itemMargin: 30,
+  //    minItems: 2,
+  //    maxItems: 5,
+  //    move: 1
+  //  });
+
   // Show Popup
   $('.open-popup').click(function(event) {
     $('.overlay').show();

@@ -4,6 +4,17 @@ app.constant("env",{
     "DOMINIO": "http://pro-gramadores.io"
 });
 
+app.directive("onRepeatEnd", function(){
+    return {
+        restrict: "A",
+        link: function (scope, element, attrs) {
+            if (scope.$last) {
+                scope.$eval(attrs.onRepeatEnd);
+            }
+        }
+    };
+});
+
 app.controller('layoutController', function($scope, $http, env){
 
     var _miembros = [
@@ -40,7 +51,7 @@ app.controller('layoutController', function($scope, $http, env){
         _miembros[j] = x;
     }
 
-    $scope.finishRepeatMiembros =  finishedRepeat(){
+    $scope.finishRepeatMiembros =  function() {
         $('.flexslider').flexslider({
             animation: "slide",
             controlNav: false,

@@ -70,7 +70,7 @@
 
       <div class="flexslider carousel">
         <ul class="slides">
-          <li ng-repeat="miembro in Miembros" on-finish-render=>
+          <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()">
             <div class="thumb">
               <a href="#" class="open-popup"><img src="images/avatar-placeholder.jpg" alt="member"></a>
             </div>
