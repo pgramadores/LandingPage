@@ -68,6 +68,7 @@ app.controller('layoutController', function($scope, $http, env){
     $scope.Miembros = _miembros;
 
     $scope.Registrar = function(){
+
         $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
         .then(function(data){
             if (data != null){
