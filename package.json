@@ -23,6 +23,7 @@
   "homepage": "https://github.com/pgramadores/LandingPage#readme",
   "dependencies": {
     "angular": "^1.6.2",
+    "animate.css": "^3.5.2",
     "css-background-video": "^0.3.0"
   }
 }
