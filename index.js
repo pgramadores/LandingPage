@@ -80,7 +80,10 @@ app.controller('layoutController', function($scope, $http, env){
             $(form).find('span').html(mensaje).toggle();
             $(form).find('input, h3').addClass('animated fadeInRight');
             $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
-            console.log('Error: ' + data);
+
+            setTimeout(function(){
+                $(form).find('span').html("Suscribirme al boletín")
+            }, 2000 );
         }
 
         var RemoverAnimaciones = function(obj){
