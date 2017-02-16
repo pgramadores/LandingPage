@@ -371,7 +371,7 @@ html[xmlns] .slides {
     margin: 0 auto 2.5em;
     line-height: 1.4em; }
     .features h2 a {
-      color: #848484; }
+      color: #fff; }
       .features h2 a:hover {
         color: white; }
   .features .container {
