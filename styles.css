@@ -10,7 +10,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
-
 .container:after {
   clear: both;
   content: ".";
@@ -26,7 +25,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
 /* 2. Reset */
 body, h1, h2, h3, h4, h5, h6, ul, li, form, div, p, ol, button, hr {
   margin: 0;

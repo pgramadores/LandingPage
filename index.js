@@ -75,19 +75,47 @@ app.controller('layoutController', function($scope, $http, env){
     $scope.Miembros = _miembros;
 
     $scope.Registrar = function(){
+        var Error = function(mensaje){
+            $(form).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
+            $(form).find('span').html(mensaje).toggle();
+            $(form).find('input, h3').addClass('animated fadeInRight');
+            $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
+
+            setTimeout(function(){
+                $(form).find('span').html("Suscribirme al boletín")
+            }, 2000 );
+        }
+
+        var RemoverAnimaciones = function(obj){
+            $(obj).find('*').removeClass('fadeOutLeft');
+            $(obj).find('*').removeClass('fadeInRight');
+            $(obj).find('*').removeClass('bounceIn');
+        }
+
+        var form = $('.reg-form');
+        RemoverAnimaciones(form);
+
+        $(form).find('i').replaceWith('<i name="icon" class="fa fa-spinner fa-pulse" aria-hidden="true"></i>').toggle(true);
+        $(form).find('input, h3').addClass('animated fadeOutLeft');
+        $(form).find('button').prop('disabled', true);
+        $(form).find('span').toggle(false);
 
         $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
         .then(function(data){
             if (data != null){
                 //Alerta de registro exitoso
-                console.log('Registrado exitosamente');
+                $(form).find('span').html('¡Registrado exitosamente!').toggle();
+                console.log('¡Registrado exitosamente!');
             }else{
                 //Alerta de error en registro
-                console.log('Error de registro: ' + data);
+                RemoverAnimaciones(form);
+                Error('¡Ya registrado!'); // No estoy seguro de como evaluar esto aún
+                console.log('Error de registro');
             }
         }, function(data){
-            //Manejo de errores
-            console.log('Error: ' + data);
+            //Error general, ej no conección
+            RemoverAnimaciones(form);
+            Error('¡Oops! Ha ocurrido un error');
         });
     };
 });
