@@ -1,7 +1,8 @@
 var app = angular.module("app", []);
 app.constant("env",{
     "APIREST": "http://localhost:3000",
-    "DOMINIO": "http://pro-gramadores.io"
+    "DOMINIO": "http://pro-gramadores.io",
+    "RUTAIMAGENPERFIL" : "images/Integrantes/"
 });
 
 app.directive("onRepeatEnd", function(){
@@ -20,27 +21,33 @@ app.controller('layoutController', function($scope, $http, env){
     var _miembros = [
         {
             nombre  : "Juan Mora",
-            origen  : "Santiago, Chile"
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Juan.jpg"
         },
         {
             nombre  : "Agustín González",
-            origen  : "Santiago, Chile"
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Agustin.jpg"
         },
         {
             nombre  : "Diego Riquelme",
-            origen  : "Santiago, Chile"
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Diego.jpg"
         },
         {
             nombre  : "Gerardo Calfulef",
-            origen  : "Santiago, Chile"
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Gerardo.jpg"
         },
         {
             nombre  : "Andrés Rodríguez",
-            origen  : "Santiago, Chile"
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Andres.jpg"
         },
         {
             nombre  : "Alexis González",
-            origen  : "Corrientes, Argentina"
+            origen  : "Corrientes, Argentina",
+            imagen  : env.RUTAIMAGENPERFIL+"Alexis.jpg"
         }
     ]
     //Shuffle de miembros
