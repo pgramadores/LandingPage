@@ -41,11 +41,14 @@
                     <div class="reg-form">
 
                         <h3>Mantente informado</h3>
-                        <form action=""  >
+                        <form action="" >
                             <input type="text" name="name" placeholder="Nombre" ng-model="registro.nombres" required/>
                             <input type="text" name="email" placeholder="Correo" ng-model="registro.correo" required/>
                             <div style="text-align:center">
-                                <button name="submit" type="button" class="btn" ng-click="Registrar()"><span>Suscribirme al boletín</span></button>
+                                <button name="submit" type="button" class="btn" ng-click="Registrar()">
+                                    <span name="text">Suscribirme al boletín</span>
+                                    <i></i>
+                                </button>
                             </div>
                         </form>
 
@@ -53,8 +56,8 @@
 
                 </div>
                 <script type="text/javascript">
-                var Shim = css['background-video'];
-                new Shim();
+                    var Shim = css['background-video'];
+                    new Shim();
                 </script>
             </div>
         </header>
