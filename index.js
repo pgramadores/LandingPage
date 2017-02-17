@@ -75,9 +75,10 @@ app.controller('layoutController', function($scope, $http, env){
     $scope.Miembros = _miembros;
 
     $scope.Registrar = function(){
+
         var Error = function(mensaje){
             $(form).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
-            $(form).find('button span').html(mensaje).toggle();
+            $(form).find('button span').html(mensaje).toggle(true);
             $(form).find('input, h3').addClass('animated fadeInRight');
             $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
 
@@ -105,7 +106,18 @@ app.controller('layoutController', function($scope, $http, env){
         .then(function(data){
             if (data != null){
                 //Alerta de registro exitoso
-                $(form).find('span').html('¡Registrado exitosamente!').toggle();
+                $(form).find('button').addClass('animated fadeInDown');
+                setTimeout(function () {
+                    $(form).find('input, button, h3').remove();
+                    noty({
+                        text        : 'Bienvenido a la comunidad de Pro-Gramadores',
+                        type        : 'alert',
+                        timeout		:  3000,
+                        layout      : 'top',
+                        theme       : 'relax'
+                    });
+                }, 300);
+
                 console.log('¡Registrado exitosamente!');
             }else{
                 //Alerta de error en registro

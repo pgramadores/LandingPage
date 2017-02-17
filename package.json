@@ -24,6 +24,7 @@
   "dependencies": {
     "angular": "^1.6.2",
     "animate.css": "^3.5.2",
-    "css-background-video": "^0.3.0"
+    "css-background-video": "^0.3.0",
+    "noty": "^2.4.1"
   }
 }
