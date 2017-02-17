@@ -82,7 +82,8 @@ app.controller('layoutController', function($scope, $http, env){
             $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
 
             setTimeout(function(){
-                $(form).find('span').html("Aprender&nbsp")
+                    $(form).find('span').html("Aprender&nbsp")
+                    $(form).find('i').replaceWith('<i></i>')
             }, 2000 );
         }
 
