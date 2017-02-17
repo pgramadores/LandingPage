@@ -77,12 +77,12 @@ app.controller('layoutController', function($scope, $http, env){
     $scope.Registrar = function(){
         var Error = function(mensaje){
             $(form).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
-            $(form).find('span').html(mensaje).toggle();
+            $(form).find('button span').html(mensaje).toggle();
             $(form).find('input, h3').addClass('animated fadeInRight');
             $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
 
             setTimeout(function(){
-                $(form).find('span').html("Suscribirme al boletín")
+                $(form).find('span').html("Aprender&nbsp")
             }, 2000 );
         }
 
@@ -110,12 +110,12 @@ app.controller('layoutController', function($scope, $http, env){
                 //Alerta de error en registro
                 RemoverAnimaciones(form);
                 Error('¡Ya registrado!'); // No estoy seguro de como evaluar esto aún
-                console.log('Error de registro');
+                console.log('Error de registro&nbsp');
             }
         }, function(data){
             //Error general, ej no conección
             RemoverAnimaciones(form);
-            Error('¡Oops! Ha ocurrido un error');
+            Error('¡Oops! Ha ocurrido un error&nbsp');
         });
     };
 });
