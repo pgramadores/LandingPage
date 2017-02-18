@@ -753,10 +753,12 @@ form :-ms-input-placeholder {
         padding-top: 20px; } }
   .header3 .btn {
     background: #000000;
-    border-top: 1px solid #b6b7ba; }
+    border: 1px solid #000000; }
     .header3 .btn:hover {
       background: #6b6b6b;
-      color: white; }
+    color: white;
+    border: solid 1px #6b6b6b;
+  }
   .header3:after {
     /*background: #191919; */
     -webkit-transform: rotate(0deg);
