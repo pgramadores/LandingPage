@@ -54,10 +54,10 @@
 
         <h3>Descubre todo lo que hemos hecho para ti</h3>
 
-        <form action="">
+        <form ng-submit="Registrar()">
           <input type="text" name="name" placeholder="Ingresa tu nombre" ng-model="registro.nombres" required/>
           <input type="text" name="email" placeholder="Ingresa tu correo" ng-model="registro.correo" required/>
-          <button name="submit" type="button" class="btn" ng-click="Registrar()"><span>Aprender&nbsp</span><i></i></button>
+          <button name="submit" type="submit" class="btn" ><span>Aprender&nbsp</span><i></i></button>
         </form>
 
       </div>

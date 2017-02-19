@@ -83,8 +83,8 @@ app.controller('layoutController', function($scope, $http, env){
             $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
 
             setTimeout(function(){
-                    $(form).find('span').html("Aprender&nbsp")
-                    $(form).find('i').replaceWith('<i></i>')
+                $(form).find('span').html("Aprender&nbsp")
+                $(form).find('i').replaceWith('<i></i>')
             }, 2000 );
         }
 
@@ -104,10 +104,8 @@ app.controller('layoutController', function($scope, $http, env){
 
         $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
         .then(function(data){
-            if (data != null){
-                //Alerta de registro exitoso
-                $(form).find('button').addClass('animated fadeInDown');
-                setTimeout(function () {
+            if (data != null){ // Si la API responde
+                if (data.ok) {
                     $(form).find('input, button, h3').remove();
                     noty({
                         text        : 'Bienvenido a la comunidad de Pro-Gramadores',
@@ -116,19 +114,16 @@ app.controller('layoutController', function($scope, $http, env){
                         layout      : 'top',
                         theme       : 'relax'
                     });
-                }, 300);
 
-                console.log('¡Registrado exitosamente!');
-            }else{
-                //Alerta de error en registro
-                RemoverAnimaciones(form);
-                Error('¡Ya registrado!'); // No estoy seguro de como evaluar esto aún
-                console.log('Error de registro&nbsp');
+                }else{
+                    Error(data.error);
+                }
             }
+            console.log(data);
         }, function(data){
             //Error general, ej no conección
             RemoverAnimaciones(form);
-            Error('¡Oops! Ha ocurrido un error&nbsp');
+            Error('¡Oops! Ha ocurrido un error!&nbsp');
         });
     };
 });
