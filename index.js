@@ -103,9 +103,10 @@ app.controller('layoutController', function($scope, $http, env){
         $(form).find('span').toggle(false);
 
         $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
-        .then(function(data){
-            if (data != null){ // Si la API responde
-                if (data.ok) {
+        .then(function(response){
+            console.log(response);
+            if (response != null){ // Si la API responde
+                if (response.status == 200) {
                     $(form).find('input, button, h3').remove();
                     noty({
                         text        : 'Bienvenido a la comunidad de Pro-Gramadores',
@@ -114,12 +115,10 @@ app.controller('layoutController', function($scope, $http, env){
                         layout      : 'top',
                         theme       : 'relax'
                     });
-
                 }else{
-                    Error(data.error);
+                    Error(response.data.error);
                 }
             }
-            console.log(data);
         }, function(data){
             //Error general, ej no conección
             RemoverAnimaciones(form);
