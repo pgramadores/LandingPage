@@ -149,7 +149,7 @@ p {
     left: -30%;
     width: 80%;
     height: 240%;
-    background: #848484;
+    background: rgba(90, 90, 90, 0.40);
     -webkit-transform: rotate(-40deg);
     -moz-transform: rotate(-40deg);
     -o-transform: rotate(-40deg);
