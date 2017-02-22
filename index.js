@@ -76,11 +76,26 @@ app.controller('layoutController', function($scope, $http, env){
 
     $scope.Registrar = function(){
 
-        var Error = function(mensaje){
-            $(form).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
-            $(form).find('button span').html(mensaje).toggle(true);
-            $(form).find('input, h3').addClass('animated fadeInRight');
-            $(form).find('button').prop('disabled', false).addClass('animated bounceIn');
+        var RemoverAnimaciones = function(obj){
+            $(obj).find('*').removeClass('fadeOutLeft');
+            $(obj).find('*').removeClass('fadeInRight');
+            $(obj).find('*').removeClass('bounceIn');
+        }
+
+        var AnimacionSalida = function(obj){
+            RemoverAnimaciones(obj);
+            $(obj).find('i').replaceWith('<i name="icon" class="fa fa-spinner fa-pulse" aria-hidden="true"></i>').toggle(true);
+            $(obj).find('input, h3').addClass('animated fadeOutLeft');
+            $(obj).find('button').prop('disabled', true);
+            $(obj).find('span').toggle(false);
+        }
+
+        var AnimacionError = function(mensaje, obj){
+            RemoverAnimaciones(obj);
+            $(obj).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
+            $(obj).find('button span').html(mensaje).toggle(true);
+            $(obj).find('input, h3').addClass('animated fadeInRight');
+            $(obj).find('button').prop('disabled', false).addClass('animated bounceIn');
 
             setTimeout(function(){
                 $(form).find('span').html("Aprender&nbsp")
@@ -88,41 +103,35 @@ app.controller('layoutController', function($scope, $http, env){
             }, 2000 );
         }
 
-        var RemoverAnimaciones = function(obj){
-            $(obj).find('*').removeClass('fadeOutLeft');
-            $(obj).find('*').removeClass('fadeInRight');
-            $(obj).find('*').removeClass('bounceIn');
-        }
-
         var form = $('.reg-form');
-        RemoverAnimaciones(form);
-
-        $(form).find('i').replaceWith('<i name="icon" class="fa fa-spinner fa-pulse" aria-hidden="true"></i>').toggle(true);
-        $(form).find('input, h3').addClass('animated fadeOutLeft');
-        $(form).find('button').prop('disabled', true);
-        $(form).find('span').toggle(false);
-
-        $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
-        .then(function(response){
-            console.log(response);
-            if (response != null){ // Si la API responde
-                if (response.status == 200) {
-                    $(form).find('input, button, h3').remove();
-                    noty({
-                        text        : 'Bienvenido a la comunidad de Pro-Gramadores',
-                        type        : 'alert',
-                        timeout		:  3000,
-                        layout      : 'top',
-                        theme       : 'relax'
-                    });
-                }else{
-                    Error(response.data.error);
+        //regex validador de mail
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(re.test($scope.registro.correo)){
+            AnimacionSalida(form);
+            $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
+            .then(function(response){
+                console.log(response);
+                if (response != null){ // Si la API responde
+                    if (response.status == 200) {
+                        $(form).find('input, button, h3').remove();
+                        noty({
+                            text        : 'Bienvenido a la comunidad de Pro-Gramadores',
+                            type        : 'alert',
+                            timeout     :  3000,
+                            layout      : 'top',
+                            theme       : 'relax'
+                        });
+                    }else{
+                        Error(response.data.error);
+                    }
                 }
-            }
-        }, function(data){
-            //Error general, ej no conección
-            RemoverAnimaciones(form);
-            Error('¡Oops! Ha ocurrido un error!&nbsp');
-        });
+            }, function(data){
+                //Error general, ej no conección
+                AnimacionError('¡Oops! Ha ocurrido un error!&nbsp', form);
+            });
+        }
+        else{
+            AnimacionError('¡Oops! Email con formato invalido!&nbsp', form);
+        }
     };
 });
