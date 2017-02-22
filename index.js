@@ -122,7 +122,7 @@ app.controller('layoutController', function($scope, $http, env){
                             theme       : 'relax'
                         });
                     }else{
-                        Error(response.data.error);
+                        AnimacionError(response.data.error);
                     }
                 }
             }, function(data){
