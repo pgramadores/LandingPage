@@ -217,6 +217,17 @@ p {
       float: left;
       max-width: 450px; } }
 
+.infoPanel {
+   background: white;
+   padding: 10px;
+   font-size: 20px;
+   box-shadow: 0px 5px 0px rgba(25, 25, 25, 0.30)}
+.infopanel h3{
+   color: #191919;}
+.infopanel a{
+   margin-left: 5px;}
+
+
 .block {
   display: inline-block;
   width: 28.20513%;
