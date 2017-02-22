@@ -199,7 +199,6 @@ p {
   z-index: 2;
   width: 38.46154%; }
   .reg-form h3 {
-    margin-bottom: 0.5em;
     color: white; }
   .reg-form p {
     text-align: center;
@@ -216,6 +215,16 @@ p {
       width: 100%;
       float: left;
       max-width: 450px; } }
+
+.infoPanel {
+    background: white;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0px 5px 0px rgba(25, 25, 25, 0.30)}
+.infopanel h3{
+    color: #191919 !important;}
+.infopanel a{
+    margin-left: 5px;}
 
 .block {
   display: inline-block;
