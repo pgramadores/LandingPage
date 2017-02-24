@@ -111,6 +111,18 @@ app.controller('layoutController', function($scope, $http, env){
             $http.post(env.APIREST + '/usuarios/registro', $scope.registro)
             .then(function(response){
                 console.log(response);
+                $(form).find('button').addClass('animated fadeOutRight');
+                setTimeout(function () {
+                    RemoverAnimaciones(form);
+                    $(form).html('<h3 class="animated fadeInLeft">Síguenos en nuestras redes sociales</h3>' +
+                    '<div class="infoPanel animated fadeInLeft">' +
+                    '<a href="https://facebook.com/pgramadores"><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a><br>' +
+                    '<a href="https://plus.google.com/+ProgramadoresBlogspotpgramadores"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;Google +</a><br>' +
+                    '<a href="https://twitter.com/pgramadores"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br>' +
+                    '<a href="https://www.youtube.com/user/pgramadores"><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;Youtube</a><br>' +
+                    '<a href="https://www.meetup.com/pgramadores/"><i class="fa fa-meetup" aria-hidden="true"></i>&nbsp;&nbsp;Meetup</a><br>'+
+                    '</div>');
+                }, 400);
                 $(form).find('input, button, h3').remove();
                 noty({
                     text        : 'Bienvenido a la comunidad de Pro-Gramadores',
@@ -123,9 +135,9 @@ app.controller('layoutController', function($scope, $http, env){
 
                 console.log(response);
                 if(response.status == 400)
-                    AnimacionError('¡Oops! El correo ingresado ya esta registrado!&nbsp', form);
+                AnimacionError('¡Oops! El correo ingresado ya esta registrado!&nbsp', form);
                 else
-                    AnimacionError('¡Oops! Ha ocurrido un error!&nbsp', form);
+                AnimacionError('¡Oops! Ha ocurrido un error!&nbsp', form);
             });
         }
         else{
