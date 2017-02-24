@@ -91,12 +91,20 @@
 
                 <div class="flexslider carousel">
                     <ul class="slides">
-                        <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()">
+                        <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()" ng-class="{'HoverMiembos':hovering}" ng-mouseenter="hovering=true" ng-mouseleave="hovering=false">
                             <div class="thumb">
                                 <a href="#" class="open-popup"><img src="{{miembro.imagen}}" alt="member"></a>
                             </div>
                             <p><a href="#" class="open-popup">{{miembro.nombre}}</a></p>
                             <span>{{miembro.origen}}</span>
+                            <div style="display:none;" ng-class="{'HoverMiembos':hovering}">
+                                <br><hr><br>
+                                <span ng-repeat="red in miembro.redes.sociales">
+                                    <a href="{{red.url}}"><i class="fa {{red.icono}}"></i> {{red.nombre}}</a><br>
+                                </span>
+                                <br><hr>
+                            </div>
+
                         </li>
                     </ul>
                 </div>

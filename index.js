@@ -1,7 +1,7 @@
 var app = angular.module("app", []);
 app.constant("env",{
     "APIREST": "http://localhost:3000",
-    "DOMINIO": "http://pro-gramadores.io",
+    "DOMINIO": "http://localhost",
     "RUTAIMAGENPERFIL" : "images/Integrantes/"
 });
 
@@ -22,7 +22,26 @@ app.controller('layoutController', function($scope, $http, env){
         {
             nombre  : "Juan Mora",
             origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Juan.jpg"
+            imagen  : env.RUTAIMAGENPERFIL+"Juan.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "facebook",
+                        url    : "https://facebook.com/raicerk",
+                        icono  : "fa-facebook"
+                    },
+                    {
+                        nombre : "linkedin",
+                        url    : "https://cl.linkedin.com/in/juanvalentinmoraruiz",
+                        icono  : "fa-linkedin"
+                    },
+                    {
+                        nombre : "twitter",
+                        url    : "https://twitter.com/raicerk",
+                        icono  : "fa-twitter"
+                    }
+                ]
+            }
         },
         {
             nombre  : "Agustín González",
@@ -127,7 +146,7 @@ app.controller('layoutController', function($scope, $http, env){
                 noty({
                     text        : 'Bienvenido a la comunidad de Pro-Gramadores',
                     type        : 'alert',
-                    timeout     :  3000,
+                    timeout     :  5000,
                     layout      : 'top',
                     theme       : 'relax'
                 });
@@ -144,4 +163,6 @@ app.controller('layoutController', function($scope, $http, env){
             AnimacionError('¡Oops! Email con formato invalido!&nbsp', form);
         }
     };
+
+
 });

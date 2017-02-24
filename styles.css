@@ -806,3 +806,7 @@ form :-ms-input-placeholder {
       color: white; }
       .footer3 .copyright ul li a:hover {
         color: #848484; }
+
+        .HoverMiembos{
+            display: block !important;
+        }
