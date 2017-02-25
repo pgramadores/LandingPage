@@ -843,9 +843,8 @@ li:hover .redesSociales{
 }
 
 .terminosycondiciones{
-    color:#fff;
+    padding-top: 7px;
 }
-
-.terminosycondiciones:hover{
+.terminosycondiciones, a, a:hover{
     color:#fff;
 }
