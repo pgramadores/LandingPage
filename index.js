@@ -141,6 +141,7 @@ app.controller('layoutController', function($scope, $http, env){
                     RemoverAnimaciones(form);
                     $(form).html('<h3 class="animated fadeInLeft">Síguenos en nuestras redes sociales</h3>' +
                     '<div class="infoPanel animated fadeInLeft">' +
+                    '<a href="https://github.com/pgramadores"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Github</a><br>' +
                     '<a href="https://facebook.com/pgramadores"><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a><br>' +
                     '<a href="https://plus.google.com/+ProgramadoresBlogspotpgramadores"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;Google +</a><br>' +
                     '<a href="https://twitter.com/pgramadores"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br>' +
