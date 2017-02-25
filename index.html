@@ -62,10 +62,10 @@
                     <h3>Descubre todo lo que hemos hecho para tí</h3>
 
                     <form ng-submit="Registrar()">
-                        <input type="text" name="name" placeholder="Ingresa tu nombre" ng-model="registro.nombres" required/>
-                        <input type="text" name="email" placeholder="Ingresa tu correo" ng-model="registro.correo" required/>
-                        <button name="submit" type="submit" class="btn" ><span>Aprender&nbsp</span><i></i></button>
-                        <a href="https://github.com/pgramadores/PoliticasSitioPGramadores" target="_blank" class="terminosycondiciones"><i class="fa fa-info-circle"></i>Terminos y condiciones</a>
+                        <input type="text" name="name" placeholder="Ingresa tu nombre" ng-model="registro.nombres" required autocomplete="off"/>
+                        <input type="text" name="email" placeholder="Ingresa tu correo" ng-model="registro.correo" required autocomplete="on"/>
+                        <button name="submit" type="submit" class="btn" ><span>Aprender</span><i>&nbsp</i></button>
+                        <center style="padding-top:5px"><a href="https://github.com/pgramadores/PoliticasSitioPGramadores" target="_blank" class="terminosycondiciones"><i class="fa fa-info-circle"></i>&nbspTérminos y condiciones</a></center>
                     </form>
 
                 </div>
