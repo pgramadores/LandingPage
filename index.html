@@ -93,7 +93,7 @@
                         <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()" class="relativo">
                             <div class="thumb">
                                 <a class="open-popup">
-                                    <img src="{{miembro.imagen}}" alt="member">
+                                    <img ng-src="{{miembro.imagen}}" alt="foto perfil {{miembro.nombres}}">
                                 </a>
                             </div>
                             <p><a href="#" class="open-popup">{{miembro.nombre}}</a></p>

@@ -16,7 +16,12 @@ app.directive("onRepeatEnd", function(){
     };
 });
 
-app.controller('layoutController', function($scope, $http, env){
+app.controller('layoutController', function($scope, $http, env, $location){
+
+    //$outputJson = $location.search().AceptaSuscripcion;
+
+    //http://localhost/LandingPage/#!?AceptaSuscripcion=2dsfsd
+    console.log($outputJson);
 
     var _miembros = [
         {
