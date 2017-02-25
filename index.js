@@ -67,6 +67,11 @@ app.controller('layoutController', function($scope, $http, env){
             nombre  : "Alexis González",
             origen  : "Corrientes, Argentina",
             imagen  : env.RUTAIMAGENPERFIL+"Alexis.jpg"
+        },
+        {
+            nombre  : "Claudia Olivares",
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Claudia.jpg"
         }
     ]
     //Shuffle de miembros
