@@ -89,18 +89,20 @@
 
                 <div class="flexslider carousel">
                     <ul class="slides">
-                        <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()">
+                        <li ng-repeat="miembro in Miembros" on-repeat-end="finishRepeatMiembros()" class="relativo">
                             <div class="thumb">
-                                <a class="open-popup"><img src="{{miembro.imagen}}" alt="member"></a>
+                                <a class="open-popup">
+                                    <img src="{{miembro.imagen}}" alt="member">
+                                </a>
                             </div>
                             <p><a href="#" class="open-popup">{{miembro.nombre}}</a></p>
                             <span>{{miembro.origen}}</span>
                             <div class="redesSociales">
-                                <br><hr><br>
+                                <br><br>
                                 <span ng-repeat="red in miembro.redes.sociales">
-                                    <a href="{{red.url}}"><i class="fa {{red.icono}}"></i> {{red.nombre}}</a><br>
+                                    <a href="{{red.url}}" target="_blank"><i class="fa {{red.icono}}"></i> {{red.nombre}}</a><br>
                                 </span>
-                                <br><hr>
+                                <br>
                             </div>
 
                         </li>
