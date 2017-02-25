@@ -833,3 +833,11 @@ li:hover .redesSociales a{
 .relativo{
     position: relative;
 }
+
+.terminosycondiciones{
+    color:#fff;
+}
+
+.terminosycondiciones:hover{
+    color:#fff;
+}
