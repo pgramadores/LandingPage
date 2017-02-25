@@ -113,7 +113,7 @@ app.controller('layoutController', function($scope, $http, env, $location){
 
         var AnimacionSalida = function(obj){
             RemoverAnimaciones(obj);
-            $(obj).find('i').replaceWith('<i name="icon" class="fa fa-spinner fa-pulse" aria-hidden="true"></i>').toggle(true);
+            $(obj).find('i:first').replaceWith('<i name="icon" class="fa fa-spinner fa-pulse" aria-hidden="true"></i>').toggle(true);
             $(obj).find('input, h3').addClass('animated fadeOutLeft');
             $(obj).find('button').prop('disabled', true);
             $(obj).find('span').toggle(false);
@@ -121,15 +121,16 @@ app.controller('layoutController', function($scope, $http, env, $location){
 
         var AnimacionError = function(mensaje, obj){
             RemoverAnimaciones(obj);
-            $(obj).find('i').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
+            $(obj).find('i:first').replaceWith('<i class="fa fa-times" aria-hidden="true"></i>');
             $(obj).find('button span').html(mensaje).toggle(true);
             $(obj).find('input, h3').addClass('animated fadeInRight');
-            $(obj).find('button').prop('disabled', false).addClass('animated bounceIn');
+            $(obj).find('button').addClass('animated bounceIn');
 
             setTimeout(function(){
-                $(form).find('span').html("Aprender&nbsp")
-                $(form).find('i').replaceWith('<i></i>')
-            }, 4000 );
+                $(obj).find('button').prop('disabled', false).addClass('animated bounceIn');
+                $(form).find('span').html("Aprender&nbsp");
+                $(form).find('i:first').replaceWith('<i></i>');
+            }, 2000 );
         }
 
         var form = $('.reg-form');

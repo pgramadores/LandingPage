@@ -826,10 +826,14 @@ form :-ms-input-placeholder {
 .redesSociales a{
     font-weight: bold;
     text-transform: capitalize;
+    transition: all .2s ease-in-out;
+    color: white;
 }
 
-.redesSociales a{
-    transition: all .15s ease .05s;
+.redesSociales a:hover{
+    text-shadow: 0px 0px 50px #000000;
+    color: black;
+    font-size: 20px;
 }
 
 li:hover .redesSociales{
@@ -843,9 +847,8 @@ li:hover .redesSociales{
 }
 
 .terminosycondiciones{
-    color:#fff;
+    padding-top: 7px;
 }
-
-.terminosycondiciones:hover{
+.terminosycondiciones, .terminosycondiciones a, .terminosycondiciones a:hover{
     color:#fff;
 }
