@@ -16,12 +16,39 @@ app.directive("onRepeatEnd", function(){
     };
 });
 
-app.controller('layoutController', function($scope, $http, env, $location){
+app.controller('layoutController', function($scope, $http, env, $location, $sce){
 
     var token = $location.search().AceptaSuscripcion;
 
     if (token) {
+
         $scope.suscripcion = true;
+
+        $http.post(env.APIREST + '/usuarios/suscripcion/',{"codigo":token})
+        .then(function(response) {
+
+            noty({
+                text        : response.data.mensaje,
+                type        : 'alert',
+                timeout     :  10000,
+                layout      : 'top',
+                theme       : 'relax'
+            });
+
+            $scope.mensajeSuscripcion =  $sce.trustAsHtml(
+            '<div class="infoPanel animated fadeInLeft">' +
+            '<a href="https://github.com/pgramadores"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;Github</a><br>' +
+            '<a href="https://facebook.com/pgramadores"><i class="fa fa-facebook-official" aria-hidden="true"></i>&nbsp;&nbsp;Facebook</a><br>' +
+            '<a href="https://plus.google.com/+ProgramadoresBlogspotpgramadores"><i class="fa fa-google-plus" aria-hidden="true"></i>&nbsp;Google +</a><br>' +
+            '<a href="https://twitter.com/pgramadores"><i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;&nbsp;Twitter</a><br>' +
+            '<a href="https://www.youtube.com/user/pgramadores"><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp;&nbsp;Youtube</a><br>' +
+            '<a href="https://www.meetup.com/pgramadores/"><i class="fa fa-meetup" aria-hidden="true"></i>&nbsp;&nbsp;Meetup</a><br>'+
+            '</div>');
+
+        },function(error) {
+            $scope.mensajeSuscripcion = $sce.trustAsHtml("<span style='color:#fff;'>Error:"+response.data.mensaje+"</span>");
+        });
+
     }
 
     //http://localhost/LandingPage/#!?AceptaSuscripcion=token_dadasdsdfadafsdzdlsmd
