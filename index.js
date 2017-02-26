@@ -18,10 +18,13 @@ app.directive("onRepeatEnd", function(){
 
 app.controller('layoutController', function($scope, $http, env, $location){
 
-    //$outputJson = $location.search().AceptaSuscripcion;
+    var token = $location.search().AceptaSuscripcion;
 
-    //http://localhost/LandingPage/#!?AceptaSuscripcion=2dsfsd
-    //console.log($outputJson);
+    if (token) {
+        $scope.suscripcion = true;
+    }
+
+    //http://localhost/LandingPage/#!?AceptaSuscripcion=token_dadasdsdfadafsdzdlsmd
 
     var _miembros = [
         {
@@ -30,6 +33,11 @@ app.controller('layoutController', function($scope, $http, env, $location){
             imagen  : env.RUTAIMAGENPERFIL+"Juan.jpg",
             redes   : {
                 sociales:[
+                    {
+                        nombre : "github",
+                        url    : "https://github.com/raicerk",
+                        icono  : "fa-github"
+                    },
                     {
                         nombre : "facebook",
                         url    : "https://facebook.com/raicerk",
@@ -76,7 +84,21 @@ app.controller('layoutController', function($scope, $http, env, $location){
         {
             nombre  : "Claudia Olivares",
             origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Claudia.jpg"
+            imagen  : env.RUTAIMAGENPERFIL+"Claudia.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "facebook",
+                        url    : "https://m.facebook.com/la.kau",
+                        icono  : "fa-facebook"
+                    },
+                    {
+                        nombre : "linkedin",
+                        url    : "https://cl.linkedin.com/in/claudia-olivares-aravena-987967137",
+                        icono  : "fa-linkedin"
+                    }
+                ]
+            }
         }
     ]
     //Shuffle de miembros

@@ -61,7 +61,7 @@
 
                     <h3>Descubre todo lo que hemos hecho para tí</h3>
 
-                    <form ng-submit="Registrar()">
+                    <form ng-submit="Registrar()" ng-hide="suscripcion">
                         <input type="text" name="name" placeholder="Ingresa tu nombre" ng-model="registro.nombres" required/>
                         <input type="email" name="email" placeholder="Ingresa tu correo" ng-model="registro.correo" required/>
                         <button name="submit" type="submit" class="btn" ><span>Aprender&nbsp</span><i></i></button>
@@ -69,6 +69,9 @@
                                 <a href="https://github.com/pgramadores/PoliticasSitioPGramadores" target="_blank"><i class="fa fa-info-circle"></i>Términos y condiciones</a>
                         </section>
                     </form>
+                    <div ng-show="suscripcion">
+                        sfdsf,pśd,fspf,ś
+                    </div>
 
                 </div>
 
