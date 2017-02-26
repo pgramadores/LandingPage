@@ -18,13 +18,24 @@ app.directive("onRepeatEnd", function(){
 
 app.controller('layoutController', function($scope, $http, env, $location, $sce){
 
-    var token = $location.search().AceptaSuscripcion;
+    var token = "";
+    var url = "";
+
+    if ($location.search().AceptaSuscripcion) {
+        token = $location.search().AceptaSuscripcion;
+        url = env.APIREST + '/usuarios/suscripcion/';
+    }else if ($location.search().AnulaSuscripcion) {
+        token = $location.search().AnulaSuscripcion;
+        url = env.APIREST + '/usuarios/cancelasuscripcion/';
+    }
+
+    console.log(token);
 
     if (token) {
 
         $scope.suscripcion = true;
 
-        $http.post(env.APIREST + '/usuarios/suscripcion/',{"codigo":token})
+        $http.post(url,{"codigo":token})
         .then(function(response) {
 
             noty({
@@ -50,8 +61,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
         });
 
     }
-
-    //http://localhost/LandingPage/#!?AceptaSuscripcion=token_dadasdsdfadafsdzdlsmd
 
     var _miembros = [
         {
