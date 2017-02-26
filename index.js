@@ -21,7 +21,7 @@ app.controller('layoutController', function($scope, $http, env, $location){
     //$outputJson = $location.search().AceptaSuscripcion;
 
     //http://localhost/LandingPage/#!?AceptaSuscripcion=2dsfsd
-    console.log($outputJson);
+    //console.log($outputJson);
 
     var _miembros = [
         {
