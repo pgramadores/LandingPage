@@ -840,15 +840,11 @@ li:hover .redesSociales{
     opacity: 1;
 }
 
-
-
 .relativo{
     position: relative;
 }
 
-.terminosycondiciones{
-    padding-top: 7px;
-}
 .terminosycondiciones, .terminosycondiciones a, .terminosycondiciones a:hover{
+    padding-top: 7px;
     color:#fff;
 }
