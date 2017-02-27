@@ -217,7 +217,7 @@ p {
       max-width: 450px; } }
 
 .infoPanel {
-   background: rgba(255,255,255,0.6);
+   background: rgba(255,255,255,0.9);
    padding: 10px;
    font-size: 20px;
    }
@@ -225,6 +225,9 @@ p {
    color: #191919;}
 .infopanel a{
    margin-left: 5px;}
+.infopanel a{
+    padding-left: 10px;
+}
 
 
 .block {
