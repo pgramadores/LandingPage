@@ -95,7 +95,16 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
         {
             nombre  : "Agustín González",
             origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Agustin.jpg"
+            imagen  : env.RUTAIMAGENPERFIL+"Agustin.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "linkedin",
+                        url    : "https://cl.linkedin.com/in/agustín-gonzález-murúa-b6180798",
+                        icono  : "fa-linkedin"
+                    }
+                ]
+            }
         },
         {
             nombre  : "Diego Riquelme",
@@ -103,14 +112,23 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
             imagen  : env.RUTAIMAGENPERFIL+"Diego.jpg"
         },
         {
-            nombre  : "Gerardo Calfulef",
-            origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Gerardo.jpg"
-        },
-        {
             nombre  : "Andrés Rodríguez",
             origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Andres.jpg"
+            imagen  : env.RUTAIMAGENPERFIL+"Andres.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "facebook",
+                        url    : "https://facebook.com/andresmanuel.rodriguezdiaz",
+                        icono  : "fa-facebook"
+                    },
+                    {
+                        nombre : "linkedin",
+                        url    : "http://www.linkedin.com/in/andres-rodriguez-diaz-2229b9100",
+                        icono  : "fa-linkedin"
+                    }
+                ]
+            }
         },
         {
             nombre  : "Alexis González",
