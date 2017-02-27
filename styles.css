@@ -7,9 +7,9 @@
 /* 5. Header */
 /* 6. Footer Section */
 /* -------------------- */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:800,400);
-@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400);
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,400);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 .container:after {
   clear: both;
   content: ".";
