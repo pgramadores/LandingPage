@@ -158,6 +158,20 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     }
                 ]
             }
+        },
+        {
+            nombre  : "Giannina Gianini",
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Giannina.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "linkedin",
+                        url    : "https://www.linkedin.com/in/giannina-gianini-6962476b/",
+                        icono  : "fa-linkedin"
+                    }
+                ]
+            }
         }
     ]
     //Shuffle de miembros
