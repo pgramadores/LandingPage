@@ -102,6 +102,11 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                         nombre : "linkedin",
                         url    : "https://cl.linkedin.com/in/agustín-gonzález-murúa-b6180798",
                         icono  : "fa-linkedin"
+                    },
+                    {
+                        nombre : "github",
+                        url    : "https://github.com/JuicyFandango",
+                        icono  : "fa-github"
                     }
                 ]
             }
