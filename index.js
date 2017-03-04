@@ -172,6 +172,19 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     }
                 ]
             }
+        },{
+            nombre  : "Bernardo Machuca",
+            origen  : "Santiago, Chile",
+            imagen  : env.RUTAIMAGENPERFIL+"Bernardo.jpg",
+            redes   : {
+                sociales: [
+                    {
+                        nombre : "facebook",
+                        url    : "https://www.facebook.com/masterlechuga",
+                        icono  : "fa-facebook"
+                    }
+                ]
+            }
         }
     ]
     //Shuffle de miembros
