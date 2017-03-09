@@ -160,7 +160,7 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
             }
         },
         {
-            nombre  : "Giannina Gianini",
+            nombre  : "Giannina Giannecchini",
             origen  : "Santiago, Chile",
             imagen  : env.RUTAIMAGENPERFIL+"Giannina.jpg",
             redes   : {
