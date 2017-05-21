@@ -1,4 +1,5 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['ui.rCalendar']);
+
 app.constant("env",{
     "APIREST": "http://localhost:3000",
     "DOMINIO": "http://localhost",
@@ -284,5 +285,42 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
         }
     };
 
+
+    var eventos = [{
+      title : "Evento muy pro",
+      startTime : "2017-05-21T19:19:00.000Z",
+      endTime: "2017-05-21T21:14:00.000Z",
+      allDay: false
+    }];
+
+    $scope.changeMode = function (mode) {
+        $scope.mode = mode;
+    };
+
+    $scope.today = function () {
+        $scope.currentDate = new Date();
+    };
+
+    $scope.isToday = function () {
+        var today = new Date(),
+          currentCalendarDate = new Date($scope.currentDate);
+
+        today.setHours(0, 0, 0, 0);
+        currentCalendarDate.setHours(0, 0, 0, 0);
+        return today.getTime() === currentCalendarDate.getTime();
+    };
+
+    $scope.loadEvents = function () {
+        $scope.eventSource = eventos;
+        console.log(createRandomEvents());
+    };
+
+    $scope.onEventSelected = function (event) {
+        $scope.event = event;
+    };
+
+    $scope.onTimeSelected = function (selectedTime, events) {
+        console.log('Selected time: ' + selectedTime + ' hasEvents: ' + (events !== undefined && events.length !== 0));
+    };
 
 });
