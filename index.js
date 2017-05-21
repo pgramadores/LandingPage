@@ -312,7 +312,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 
     $scope.loadEvents = function () {
         $scope.eventSource = eventos;
-        console.log(createRandomEvents());
     };
 
     $scope.onEventSelected = function (event) {
