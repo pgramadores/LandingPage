@@ -288,8 +288,8 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 
     var eventos = [{
       title : "Evento muy pro",
-      startTime : "2017-05-21T19:19:00.000Z",
-      endTime: "2017-05-21T21:14:00.000Z",
+      startTime : "2017-07-30T19:19:00.000Z",
+      endTime: "2017-07-30T21:14:00.000Z",
       allDay: false
     }];
 
