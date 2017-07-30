@@ -151,7 +151,7 @@
               <div class="redesSociales">
                 <br><br>
                 <span ng-repeat="red in miembro.redes.sociales">
-                  <a href="{{red.url}}" target="_blank"><i class="fa {{red.icono}}"></i> {{red.nombre}}</a><br>
+                  <a href="{{red.url}}" target="_blank"><i class="fa {{red.icono}}"></i> {{red.nick}}</a><br>
                 </span>
                 <br>
               </div>
@@ -206,7 +206,7 @@
     <section class="calendarPro">
       <div class="container">
         <h2>¡Revisa acá nuestros eventos!</h2>
-        <h4>¿Quieres agregar tus eventos en nuestro calendario? ¡Revisa acá como hacerlo!</h4>
+        <h4>¿Quieres agregar tus eventos en nuestro calendario? <a style="font-weight:none;color: #848484;" href="https://github.com/pgramadores/APIBlog" target="_blank">¡Revisa acá como hacerlo!</a></h4>
         <br>
         <div class="contenedorCalendario">
           <div class="alert alert-success" ng-show="event">
@@ -226,7 +226,7 @@
             </div>
           </div>
           <div class="well well-sm">
-            <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource" range-changed="reloadSource(startTime, endTime)" event-selected="onEventSelected(event)" time-selected="onTimeSelected(selectedTime, events)"></calendar>
+            <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource" range-changed="reloadSource(startTime, endTime)" event-selected="onEventSelected(event)" time-selected="onTimeSelected(selectedTime, events)" startingDay=1></calendar>
           </div>
 
         </div>

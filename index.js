@@ -73,22 +73,26 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "github",
                         url    : "https://github.com/raicerk",
-                        icono  : "fa-github"
+                        icono  : "fa-github",
+                        nick   : "raicerk"
                     },
                     {
                         nombre : "facebook",
                         url    : "https://facebook.com/raicerk",
-                        icono  : "fa-facebook"
+                        icono  : "fa-facebook",
+                        nick   : "raicerk"
                     },
                     {
                         nombre : "linkedin",
                         url    : "https://cl.linkedin.com/in/juanvalentinmoraruiz",
-                        icono  : "fa-linkedin"
+                        icono  : "fa-linkedin",
+                        nick   : "juanvalentinmoraruiz"
                     },
                     {
                         nombre : "twitter",
                         url    : "https://twitter.com/raicerk",
-                        icono  : "fa-twitter"
+                        icono  : "fa-twitter",
+                        nick   : "raicerk"
                     }
                 ]
             }
@@ -102,12 +106,14 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "linkedin",
                         url    : "https://cl.linkedin.com/in/agustín-gonzález-murúa-b6180798",
-                        icono  : "fa-linkedin"
+                        icono  : "fa-linkedin",
+                        nick   : "agustín-gonzález-murúa-b6180798"
                     },
                     {
                         nombre : "github",
                         url    : "https://github.com/JuicyFandango",
-                        icono  : "fa-github"
+                        icono  : "fa-github",
+                        nick   : "JuicyFandango"
                     }
                 ]
             }
@@ -126,12 +132,14 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "facebook",
                         url    : "https://facebook.com/andresmanuel.rodriguezdiaz",
-                        icono  : "fa-facebook"
+                        icono  : "fa-facebook",
+                        nick   : "andresmanuel.rodriguezdiaz"
                     },
                     {
                         nombre : "linkedin",
                         url    : "http://www.linkedin.com/in/andres-rodriguez-diaz-2229b9100",
-                        icono  : "fa-linkedin"
+                        icono  : "fa-linkedin",
+                        nick   : "andres-rodriguez-diaz-2229b9100"
                     }
                 ]
             }
@@ -145,12 +153,14 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "facebook",
                         url    : "https://www.facebook.com/Alexisgonzalezemmanuel",
-                        icono  : "fa-facebook"
+                        icono  : "fa-facebook",
+                        nick   : "Alexisgonzalezemmanuel"
                     },
                     {
                         nombre : "github",
                         url    : "https://github.com/AlexisGnz",
-                        icono  : "fa-github"
+                        icono  : "fa-github",
+                        nick   : "AlexisGnz"
                     }
                 ]
             }
@@ -164,17 +174,20 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "facebook",
                         url    : "https://www.facebook.com/tobias.g.schwarz",
-                        icono  : "fa-facebook"
+                        icono  : "fa-facebook",
+                        nick   : "tobias.g.schwarz"
                     },
                     {
                         nombre : "github",
                         url    : "https://github.com/tobias2801",
-                        icono  : "fa-github"
+                        icono  : "fa-github",
+                        nick   : "tobias2801"
                     },
                     {
                         nombre : "instagram",
                         url    : "https://instagram.com/tobias_g_schwarz",
-                        icono  : "fa-instagram"
+                        icono  : "fa-instagram",
+                        nick   : "tobias_g_schwarz"
                     }
                 ]
             }
@@ -195,7 +208,8 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "linkedin",
                         url    : "https://www.linkedin.com/in/giannina-gianini-6962476b/",
-                        icono  : "fa-linkedin"
+                        icono  : "fa-linkedin",
+                        nick   : "giannina-gianini-6962476b"
                     }
                 ]
             }
@@ -209,7 +223,8 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     {
                         nombre : "facebook",
                         url    : "https://www.facebook.com/masterlechuga",
-                        icono  : "fa-facebook"
+                        icono  : "fa-facebook",
+                        nick   : "masterlechuga"
                     }
                 ]
             }
