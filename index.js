@@ -139,25 +139,51 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
         {
             nombre  : "Alexis González",
             origen  : "Corrientes, Argentina",
-            imagen  : env.RUTAIMAGENPERFIL+"Alexis.jpg"
-        },
-        {
-            nombre  : "Claudia Olivares",
-            origen  : "Santiago, Chile",
-            imagen  : env.RUTAIMAGENPERFIL+"Claudia.jpg",
+            imagen  : env.RUTAIMAGENPERFIL+"Alexis.jpg",
             redes   : {
                 sociales:[
                     {
                         nombre : "facebook",
-                        url    : "https://m.facebook.com/la.kau",
+                        url    : "https://www.facebook.com/Alexisgonzalezemmanuel",
                         icono  : "fa-facebook"
                     },
                     {
-                        nombre : "linkedin",
-                        url    : "https://cl.linkedin.com/in/claudia-olivares-aravena-987967137",
-                        icono  : "fa-linkedin"
+                        nombre : "github",
+                        url    : "https://github.com/AlexisGnz",
+                        icono  : "fa-github"
                     }
                 ]
+            }
+        },
+        {
+            nombre  : "Tobías Schwarz",
+            origen  : "Basavilbaso, Entre Ríos, Argentina",
+            imagen  : env.RUTAIMAGENPERFIL+"Tobias.jpg",
+            redes   : {
+                sociales:[
+                    {
+                        nombre : "facebook",
+                        url    : "https://www.facebook.com/tobias.g.schwarz",
+                        icono  : "fa-facebook"
+                    },
+                    {
+                        nombre : "github",
+                        url    : "https://github.com/tobias2801",
+                        icono  : "fa-github"
+                    },
+                    {
+                        nombre : "instagram",
+                        url    : "https://instagram.com/tobias_g_schwarz",
+                        icono  : "fa-instagram"
+                    }
+                ]
+            }
+        },
+        {
+            nombre  : "Matias Olivera",
+            origen  : "Resistencia, Chaco, Argentina",
+            imagen  : env.RUTAIMAGENPERFIL+"Matias.jpg",
+            redes   : {
             }
         },
         {
@@ -173,7 +199,8 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
                     }
                 ]
             }
-        },{
+        },
+        {
             nombre  : "Bernardo Machuca",
             origen  : "Santiago, Chile",
             imagen  : env.RUTAIMAGENPERFIL+"Bernardo.jpg",
@@ -288,10 +315,15 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 
     var eventos = [{
       title : "Evento muy pro",
-      startTime : "2017-07-30T19:19:00.000Z",
-      endTime: "2017-07-30T21:14:00.000Z",
+      description : "Esta es la descripcion larga del evento",
+      startTime : "2017-07-31T19:19:00.000Z",
+      endTime: "2017-07-31T21:14:00.000Z",
       allDay: false
     }];
+
+    $(document).ready(function(){
+      $('.event-detail-container').before('<h5>Para obtener mas detalle del evento has clic sobre el titulo del evento en esta tabla</h5>');
+    });
 
     $scope.changeMode = function (mode) {
         $scope.mode = mode;

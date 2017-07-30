@@ -209,7 +209,11 @@
         <h4>¿Quieres agregar tus eventos en nuestro calendario? ¡Revisa acá como hacerlo!</h4>
         <br>
         <div class="contenedorCalendario">
-          <div class="alert alert-success" ng-show="event">Evento seleccionado : desde {{event.startTime|date: 'dd-MM-yyyy HH:mm'}} hasta {{event.endTime|date:'dd-MM-yyyy HH:mm'}} : {{event.title}}
+          <div class="alert alert-success" ng-show="event">
+            Titulo: {{event.title}}<br>
+            Desde: {{event.startTime|date: 'dd-MM-yyyy'}} a las {{event.startTime | date: 'HH:mm'}} <br>
+            Hasta: {{event.endTime|date:'dd-MM-yyyy HH:mm'}} a las {{event.endTime | date: 'HH:mm'}}<br>
+            Descripción del evento: {{event.description}}
           </div>
           <div class="btn-toolbar">
             <div class="btn-group">
@@ -224,6 +228,7 @@
           <div class="well well-sm">
             <calendar ng-model="currentDate" calendar-mode="mode" event-source="eventSource" range-changed="reloadSource(startTime, endTime)" event-selected="onEventSelected(event)" time-selected="onTimeSelected(selectedTime, events)"></calendar>
           </div>
+
         </div>
       </div>
     </section>
@@ -269,6 +274,20 @@
 
   <!-- Footer -->
   <footer class="source-org footer footer3">
+
+    <div class="container">
+
+      <p>
+        ¿Quieres ayudar a que podamos hacer mas eventos de manera gratuita?
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="W8Z8G69KKRAHA">
+          <input type="image" src="http://sagescholars.uci.edu/files/2016/07/Donate-Button.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" style="width:10%; background: none; padding:0;">
+        </form>
+
+      </p>
+
+    </div>
 
     <div class="container">
 
