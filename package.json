@@ -1,8 +1,8 @@
 {
   "name": "pgramadores-landingpage",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "Landing page para el sitio web de la comunidad Pro-Gramadores",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
