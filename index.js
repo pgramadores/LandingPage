@@ -135,26 +135,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 			}
 		},
 		{
-			nombre: "Agustín González",
-			origen: "Santiago, Chile",
-			imagen: env.RUTAIMAGENPERFIL + "Agustin.jpg",
-			redes: {
-				sociales: [{
-						nombre: "linkedin",
-						url: "https://cl.linkedin.com/in/agustín-gonzález-murúa-b6180798",
-						icono: "fa-linkedin",
-						nick: "agustín-gonzález-murúa-b6180798"
-					},
-					{
-						nombre: "github",
-						url: "https://github.com/JuicyFandango",
-						icono: "fa-github",
-						nick: "JuicyFandango"
-					}
-				]
-			}
-		},
-		{
 			nombre: "Diego Riquelme",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Diego.jpg"
@@ -226,12 +206,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 			}
 		},
 		{
-			nombre: "Matias Olivera",
-			origen: "Resistencia, Chaco, Argentina",
-			imagen: env.RUTAIMAGENPERFIL + "Matias.jpg",
-			redes: {}
-		},
-		{
 			nombre: "Giannina Giannecchini",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Giannina.jpg",
@@ -255,6 +229,19 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 					icono: "fa-facebook",
 					nick: "masterlechuga"
 				}]
+			}
+		},{
+			nombre: "Jose Velazquez",
+			origen: "Oaxaca, México",
+			imagen: env.RUTAIMAGENPERFIL + "Jose.jpg",
+			redes: {
+				sociales: [{
+						nombre: "Facebook",
+						url: "https://www.facebook.com/JEVOSIRROCKER",
+						icono: "fa-facebook",
+						nick: "JEVOSIRROCKER"
+					}
+				]
 			}
 		}
 	]
