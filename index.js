@@ -243,6 +243,19 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 					}
 				]
 			}
+		},{
+			nombre: "Christiaan Fuentes",
+			origen: "Santiago, Chile",
+			imagen: env.RUTAIMAGENPERFIL + "Christiaan.jpg",
+			redes: {
+				sociales: [{
+						nombre: "Facebook",
+						url: "https://facebook.com/christiaan.fuentes",
+						icono: "fa-facebook",
+						nick: "christiaan.fuentes"
+					}
+				]
+			}
 		}
 	]
 	//Shuffle de miembros
