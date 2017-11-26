@@ -102,7 +102,8 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 
 	}
 
-	var _miembros = [{
+	var _miembros = [
+    {
 			nombre: "Juan Mora",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Juan.jpg",
@@ -232,6 +233,32 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 			}
 		},
 		{
+			nombre: "Jose Velazquez",
+			origen: "Oaxaca, México",
+			imagen: env.RUTAIMAGENPERFIL + "Jose.jpg",
+			redes: {
+				sociales: [{
+						nombre: "Facebook",
+						url: "https://www.facebook.com/JEVOSIRROCKER",
+						icono: "fa-facebook",
+						nick: "JEVOSIRROCKER"
+					}
+				]
+			}
+		},{
+			nombre: "Christiaan Fuentes",
+			origen: "Santiago, Chile",
+			imagen: env.RUTAIMAGENPERFIL + "Christiaan.jpg",
+			redes: {
+				sociales: [{
+						nombre: "Facebook",
+						url: "https://facebook.com/christiaan.fuentes",
+						icono: "fa-facebook",
+						nick: "christiaan.fuentes"
+					}
+				]
+			}
+		},{
 			nombre: "Manuel Caroca",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Manuel.jpg",
@@ -253,7 +280,7 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 						url: "https://instagram.com/mjcarok",
 						icono: "fa-instagram",
 						nick: "mjcarok"
-					}
+		      }
 				]
 			}
 		}
