@@ -1,10 +1,10 @@
 var app = angular.module("app", ['ui.rCalendar']);
 
 app.constant("env", {
-	"APIREST": "http://localhost:3000",
-	"DOMINIO": "http://localhost",
+	"APIREST": "https://pro-gramadores.org:3000",
+	"DOMINIO": "https://pro-gramadores.org",
 	"RUTAIMAGENPERFIL": "images/Integrantes/",
-	"APICALENDARIO": "https://localhost:4000/eventos/consultar/"
+	"APICALENDARIO": "https://pro-gramadores.org:4000/eventos/consultar/"
 });
 
 app.directive("onRepeatEnd", function() {
@@ -230,29 +230,52 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 					nick: "masterlechuga"
 				}]
 			}
-		},{
+		}, {
 			nombre: "Jose Velazquez",
 			origen: "Oaxaca, México",
 			imagen: env.RUTAIMAGENPERFIL + "Jose.jpg",
 			redes: {
 				sociales: [{
-						nombre: "Facebook",
-						url: "https://www.facebook.com/JEVOSIRROCKER",
-						icono: "fa-facebook",
-						nick: "JEVOSIRROCKER"
-					}
-				]
+					nombre: "Facebook",
+					url: "https://www.facebook.com/JEVOSIRROCKER",
+					icono: "fa-facebook",
+					nick: "JEVOSIRROCKER"
+				}]
 			}
-		},{
+		}, {
 			nombre: "Christiaan Fuentes",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Christiaan.jpg",
 			redes: {
 				sociales: [{
-						nombre: "Facebook",
-						url: "https://facebook.com/christiaan.fuentes",
+					nombre: "Facebook",
+					url: "https://facebook.com/christiaan.fuentes",
+					icono: "fa-facebook",
+					nick: "christiaan.fuentes"
+				}]
+			}
+		}, {
+			nombre: "Manuel Caroca",
+			origen: "Santiago, Chile",
+			imagen: env.RUTAIMAGENPERFIL + "Manuel.jpg",
+			redes: {
+				sociales: [{
+						nombre: "facebook",
+						url: "https://www.facebook.com/manuelcarok",
 						icono: "fa-facebook",
-						nick: "christiaan.fuentes"
+						nick: "manuelcarok"
+					},
+					{
+						nombre: "github",
+						url: "https://github.com/ManuelCarok",
+						icono: "fa-github",
+						nick: "ManuelCarok"
+					},
+					{
+						nombre: "instagram",
+						url: "https://instagram.com/mjcarok",
+						icono: "fa-instagram",
+						nick: "mjcarok"
 					}
 				]
 			}
