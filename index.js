@@ -1,10 +1,10 @@
 var app = angular.module("app", ['ui.rCalendar']);
 
 app.constant("env", {
-	"APIREST": "http://localhost:3000",
-	"DOMINIO": "http://localhost",
+	"APIREST": "https://pro-gramadores.org:3000",
+	"DOMINIO": "https://pro-gramadores.org",
 	"RUTAIMAGENPERFIL": "images/Integrantes/",
-	"APICALENDARIO": "https://localhost:4000/eventos/consultar/"
+	"APICALENDARIO": "https://pro-gramadores.org:4000/eventos/consultar/"
 });
 
 app.directive("onRepeatEnd", function() {
@@ -135,26 +135,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 			}
 		},
 		{
-			nombre: "Agustín González",
-			origen: "Santiago, Chile",
-			imagen: env.RUTAIMAGENPERFIL + "Agustin.jpg",
-			redes: {
-				sociales: [{
-						nombre: "linkedin",
-						url: "https://cl.linkedin.com/in/agustín-gonzález-murúa-b6180798",
-						icono: "fa-linkedin",
-						nick: "agustín-gonzález-murúa-b6180798"
-					},
-					{
-						nombre: "github",
-						url: "https://github.com/JuicyFandango",
-						icono: "fa-github",
-						nick: "JuicyFandango"
-					}
-				]
-			}
-		},
-		{
 			nombre: "Diego Riquelme",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Diego.jpg"
@@ -226,12 +206,6 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 			}
 		},
 		{
-			nombre: "Matias Olivera",
-			origen: "Resistencia, Chaco, Argentina",
-			imagen: env.RUTAIMAGENPERFIL + "Matias.jpg",
-			redes: {}
-		},
-		{
 			nombre: "Giannina Giannecchini",
 			origen: "Santiago, Chile",
 			imagen: env.RUTAIMAGENPERFIL + "Giannina.jpg",
@@ -255,6 +229,32 @@ app.controller('layoutController', function($scope, $http, env, $location, $sce)
 					icono: "fa-facebook",
 					nick: "masterlechuga"
 				}]
+			}
+		},
+		{
+			nombre: "Manuel Caroca",
+			origen: "Santiago, Chile",
+			imagen: env.RUTAIMAGENPERFIL + "Manuel.jpg",
+			redes: {
+				sociales: [{
+						nombre: "facebook",
+						url: "https://www.facebook.com/manuelcarok",
+						icono: "fa-facebook",
+						nick: "manuelcarok"
+					},
+					{
+						nombre: "github",
+						url: "https://github.com/ManuelCarok",
+						icono: "fa-github",
+						nick: "ManuelCarok"
+					},
+					{
+						nombre: "instagram",
+						url: "https://instagram.com/mjcarok",
+						icono: "fa-instagram",
+						nick: "mjcarok"
+					}
+				]
 			}
 		}
 	]
